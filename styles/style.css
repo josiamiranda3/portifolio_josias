@@ -109,19 +109,6 @@ body {
     background-color: var(--cor--hover);
 }
 
-.apresentacao__imagem {
-    width: 50%;
-}
-
-.rodape {
-    padding: 24px;
-    color: var(--cor-primaria);
-    background-color: var(--cor-terciaria);
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
-}
-
 /* Responsividade */
 @media (max-width: 1200px) {
     .cabecalho {
@@ -147,7 +134,8 @@ body {
     }
 
     .apresentacao__imagem {
-        width: 80%;
+        width: 100%;
+        max-width: 400px;
     }
 
     .apresentacao__links {
@@ -161,32 +149,34 @@ body {
     }
 
     .imagem {
-        width: 80vw;
+        width: 90vw;
         height: auto;
         padding-left: 0;
     }
 
     .img {
-        width: 80%;
+        width: 100%;
         height: auto;
+        max-width: 400px;
+        max-height: 500px;
     }
 }
 
-/* Estilo para a div que contém a imagem */
+/* Ajuste da Imagem para Adaptabilidade */
 .imagem {
-    width: 50vw;
-    height: 85vh;
-    padding-left: 35px;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Estilo para a imagem dentro da div */
 .img {
-    width: 35vw;
-    height: 80vh;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
     border-radius: 10px;
 }
 
