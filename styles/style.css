@@ -1,46 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@400;600&display=swap');
-:root{
-    /* --cor-primaria: #000000;
-    --cor-secundaria: #f6f6f6;
-    --cor-terciaria: #22d4fd;
-    --cor--hover: #272727; */
 
+:root {
     --cor-primaria: #E5D9B6;
     --cor-secundaria: #A4BE7B;
     --cor-terciaria: #5F8D4E;
     --cor--hover: #285430;
 
     --fonte-primaria: 'Krona One', sans-serif;
-    --fonte-secundaria: 'Montserrat',sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     text-decoration: none;
-    /* comprime o conteudo filho para se adaptar e efetuar performance  */
-    /* habilita  processo para os filhos no flex-direction (display-flex) */
-
-    /* A propriedade "display: flex;" é a chave para ativar o Flexbox em um elemento. 
-    Isso faz com que os elementos filhos desse elemento pai se tornem itens flexíveis,
-     permitindo que você os organize e alinhe de forma dinâmica.  */
 }
 
-body{
-    /* height: 100vh; */
+body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
 
-.cabecalho{
+.cabecalho {
     padding: 2% 0% 0% 15%;
 }
 
-.cabecalho__menu{
+.cabecalho__menu {
     display: flex;
     gap: 80px;
 }
@@ -53,100 +41,80 @@ body{
     text-decoration: none;
 }
 
-.apresentacao{
+.apresentacao {
     padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:82px;
+    gap: 82px;
 }
 
-.apresentacao__conteudo{
+.apresentacao__conteudo {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.apresentacao__conteudo__titulo{
-
+.apresentacao__conteudo__titulo {
     font-size: 2.25rem;
-    /* tamanho do texto */
     font-family: var(--fonte-primaria);
 }
 
-.titulo-destaque{
+.titulo-destaque {
     color: var(--cor-terciaria);
 }
 
-.apresentacao__conteudo__texto{
-
+.apresentacao__conteudo__texto {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
-
-.apresentacao__conteudo__texto a{
+.apresentacao__conteudo__texto a {
     text-decoration: none;
     color: var(--cor-terciaria);
 }
 
 .apresentacao__links {
-
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-gap: 32px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
 }
 
-.apresentacao__links__subtitulo{
-
-font-family: var(--fonte-primaria);
-font-weight: 400;
-font-size: 1.5rem;
-
-
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .apresentacao__links__navegacao {
-
-/* background-color: #22D4FD; */
-border: 2px solid var(--cor-terciaria);
-width: 50%;
-text-align: center;  
-border-radius: 8px;
-font-size: 1.5rem;
-padding: 21.5px 0 ; 
-color: var(--cor-secundaria);
-font-family: var(--fonte-secundaria);
-
-/* height: 30vh; */
-
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__links__navegacao:hover{
+.apresentacao__links__navegacao:hover {
     background-color: #94cf99;
     color: #285430;
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__link:hover {
     background-color: var(--cor--hover);
 }
 
-.apresentacao__imagem{
+.apresentacao__imagem {
     width: 50%;
 }
 
-/* 
-Um link para o meu site (favorito)
-
-<p>Um link para o meu <a href="https://www.mozilla.org/" title="Página da Mozilla" target="_blank"> site favorito</a>.</p> 
-*/
-
-.rodape{
-    padding:24px;
+.rodape {
+    padding: 24px;
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
     text-align: center;
@@ -154,81 +122,109 @@ Um link para o meu site (favorito)
     font-size: 1.5rem;
 }
 
-@media (max-widht: 1200px){
-
-    .cabecalho{
-        padding: 10%;
+/* Responsividade */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 5%;
+        text-align: center;
     }
 
-    .cabecalho__menu{
-        justify-content: center;
-
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
-    .apresentacao{
+
+    .apresentacao {
         flex-direction: column-reverse;
         padding: 5%;
+        gap: 40px;
+        text-align: center;
     }
-    .apresentacao__conteudo{
-        width: auto;
 
+    .apresentacao__conteudo {
+        width: 100%;
+    }
+
+    .apresentacao__imagem {
+        width: 80%;
+    }
+
+    .apresentacao__links {
+        width: 100%;
+    }
+
+    .apresentacao__links__navegacao {
+        width: 80%;
+        font-size: 1.2rem;
+        padding: 15px 0;
+    }
+
+    .imagem {
+        width: 80vw;
+        height: auto;
+        padding-left: 0;
+    }
+
+    .img {
+        width: 80%;
+        height: auto;
     }
 }
 
-
 /* Estilo para a div que contém a imagem */
 .imagem {
-    /* border: solid 2px red; Borda vermelha de 2px */
-    width: 50vw; /* Largura de 50% da viewport */
-    height: 85vh; /* Altura de 85% da viewport */
-    padding-left: 35px; /* Espaçamento interno à esquerda */
-    display: flex; /* Para alinhar a imagem dentro da div */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    width: 50vw;
+    height: 85vh;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilo para a imagem dentro da div */
 .img {
-    width: 35vw; /* Largura de 35% da viewport */
-    height: 80vh; /* Altura de 80% da viewport */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-    border-radius: 10px; /* Borda arredondada (opcional) */
+    width: 35vw;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Estilo para a seção de Experiência Profissional */
 .curriculo__descricao {
-    margin-bottom: 30px; /* Espaçamento abaixo da seção */
+    margin-bottom: 30px;
 }
 
 .curriculo__descricao h3 {
-    font-size: 24px; /* Tamanho da fonte do título */
-    color: #333; /* Cor do título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    border-bottom: 2px solid #007bff; /* Linha abaixo do título */
-    padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
 }
 
 .curriculo__descricao div {
-    margin-bottom: 20px; /* Espaçamento entre cada experiência */
-    padding: 15px; /* Espaçamento interno */
-    background-color: #A4BE7B; /* Cor de fundo */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #A4BE7B;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .curriculo__descricao div:hover {
-    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .curriculo__descricao h4 {
-    font-size: 20px; /* Tamanho da fonte do subtítulo */
-    color: #007bff; /* Cor do subtítulo */
-    margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
 }
 
 .curriculo__descricao p {
-    font-size: 16px; /* Tamanho da fonte do parágrafo */
-    color: #555; /* Cor do texto */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
 }
